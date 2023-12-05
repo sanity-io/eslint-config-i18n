@@ -54,7 +54,7 @@ Optionally: If you wish to configure `@sanity/eslint-plugin-i18n`:
         "mode": "extends"
       }
     ],
-    "@sanity/i18n/no-attribute-string-literals": [
+    "@sanity/i18n/no-attribute-template-literals": [
       "error",
       // See https://github.com/sanity-io/eslint-plugin-i18n#rule-options
       {
