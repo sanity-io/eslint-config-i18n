@@ -51,7 +51,7 @@ Optionally: If you wish to configure `@sanity/eslint-plugin-i18n`:
       {
         "ignores": {},
         "only": {},
-        "mode": "extends"
+        "mode": "extend"
       }
     ],
     "@sanity/i18n/no-attribute-template-literals": [
@@ -60,7 +60,7 @@ Optionally: If you wish to configure `@sanity/eslint-plugin-i18n`:
       {
         "ignores": {},
         "only": {},
-        "mode": "extends"
+        "mode": "extend"
       }
     ]
   },
