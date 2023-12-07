@@ -2,6 +2,8 @@
 
 An ESLint configuration to help with localizing Sanity Studios.
 
+This ESLint config provides rules to enforce specific code standards in internationalization practices, particularly focusing on strings literals in JSX. It aims to improve code quality and maintainability in projects with internationalization concerns.
+
 This package utilizes [@rushstack/eslint-patch](https://github.com/microsoft/rushstack/tree/ebee58403b1595027da7ef00a4d817d83ecbd737/eslint/eslint-patch#what-it-does) to include plugins as dependencies. This making installation easier and allows us to manage those dependencies for you.
 
 Depends on:
