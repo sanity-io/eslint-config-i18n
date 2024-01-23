@@ -20,6 +20,7 @@ module.exports = {
     'i18next/no-literal-string': 'error',
     '@sanity/i18n/no-attribute-string-literals': 'error',
     '@sanity/i18n/no-attribute-template-literals': 'error',
+    '@sanity/i18n/no-i18next-import': 'error',
   },
 
   overrides: [

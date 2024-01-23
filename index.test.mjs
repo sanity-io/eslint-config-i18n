@@ -13,10 +13,11 @@ const stdout = await new Promise((resolve, reject) => {
 
 const output = JSON.parse(stdout);
 const { messages } = output[0];
-const [first, second, third] = messages;
+const [first, second, third, fourth] = messages;
 
 assert(output.length === 1);
-assert(messages.length === 3);
-assert(first.ruleId === 'i18next/no-literal-string');
-assert(second.ruleId === '@sanity/i18n/no-attribute-string-literals');
-assert(third.ruleId === '@sanity/i18n/no-attribute-template-literals');
+assert(messages.length === 4);
+assert(first.ruleId === '@sanity/i18n/no-i18next-import');
+assert(second.ruleId === 'i18next/no-literal-string');
+assert(third.ruleId === '@sanity/i18n/no-attribute-string-literals');
+assert(fourth.ruleId === '@sanity/i18n/no-attribute-template-literals');
