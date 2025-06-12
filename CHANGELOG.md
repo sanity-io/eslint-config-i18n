@@ -5,6 +5,16 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/sanity-io/eslint-config-i18n/compare/v1.1.0...v2.0.0) (2025-06-12)
+
+### ⚠ BREAKING CHANGES
+
+- upgrade to eslint@9
+
+### Features
+
+- upgrade to eslint@9 ([cf7fcb5](https://github.com/sanity-io/eslint-config-i18n/commit/cf7fcb5ba7280e9cf06b558cec176b7798107c14))
+
 ## [1.1.0](https://github.com/sanity-io/eslint-config-i18n/compare/v1.0.0...v1.1.0) (2024-01-23)
 
 ### Features
