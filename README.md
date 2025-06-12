@@ -4,8 +4,6 @@ An ESLint configuration to help with localizing Sanity Studios.
 
 This ESLint config provides rules to enforce specific code standards in internationalization practices, particularly focusing on strings literals in JSX. It aims to improve code quality and maintainability in projects with internationalization concerns.
 
-This package utilizes [@rushstack/eslint-patch](https://github.com/microsoft/rushstack/tree/ebee58403b1595027da7ef00a4d817d83ecbd737/eslint/eslint-patch#what-it-does) to include plugins as dependencies. This making installation easier and allows us to manage those dependencies for you.
-
 Depends on:
 
 - [`@sanity/eslint-plugin-i18n`](https://github.com/sanity-io/eslint-plugin-i18n)
@@ -19,7 +17,7 @@ Depends on:
 ### Install
 
 ```
-yarn add eslint @sanity/eslint-config-i18n --dev
+pnpm add eslint @sanity/eslint-config-i18n --save-dev
 ```
 
 or
@@ -30,59 +28,23 @@ npm install eslint @sanity/eslint-config-i18n --save-dev
 
 ### Update the configuration
 
-Update your `.eslintrc` to include `"@sanity/eslint-config-i18n"`
+Update your `eslint.config.mjs` to include `"@sanity/eslint-config-i18n"`
 
-```
-{
-  "extends": [
-    "@sanity/eslint-config-studio",
-    "@sanity/eslint-config-i18n"
-  ]
-}
+```diff
+ import studio from '@sanity/eslint-config-studio'
++import i18n from '@sanity/eslint-config-i18n'
+
+export default [
+   ...studio,
++  ...i18n,
+]
 ```
 
-Optionally: If you wish to configure `@sanity/eslint-plugin-i18n`:
+### Version compatibility
 
-```json
-{
-  "extends": ["@sanity/eslint-config-studio", "@sanity/eslint-config-i18n"],
-  "rules": {
-    "@sanity/i18n/no-attribute-string-literals": [
-      "error",
-      // See https://github.com/sanity-io/eslint-plugin-i18n#rule-options
-      {
-        "ignores": {},
-        "only": {},
-        "mode": "extend"
-      }
-    ],
-    "@sanity/i18n/no-attribute-template-literals": [
-      "error",
-      // See https://github.com/sanity-io/eslint-plugin-i18n#rule-options
-      {
-        "ignores": {},
-        "only": {},
-        "mode": "extend"
-      }
-    ]
-  },
-  "overrides": [
-    // turn off these rules for your tests
-    {
-      "files": [
-        "**/*/test/**/*",
-        "**/*/__tests__/**/*",
-        "**/*.test.{js,ts,tsx}"
-      ],
-      "rules": {
-        "i18next/no-literal-string": "off",
-        "@sanity/i18n/no-attribute-string-literals": "off",
-        "@sanity/i18n/no-attribute-template-literals": "off"
-      }
-    }
-  ]
-}
-```
+This package is designed to work with ESLint >= 9, which supports/uses the new ["flat configuration"](https://eslint.org/blog/2022/08/new-config-system-part-2/) format.
+
+If you are using ESLint <= 8, you should install and use [`@sanity/eslint-config-i18n@1`](https://github.com/sanity-io/eslint-config-i18n/tree/v1.1.0).
 
 ## Release new version
 
