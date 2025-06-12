@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@sanity/prettier-config": "^1.0.3",
-    "@sanity/semantic-release-preset": "^4.1.4",
+    "@sanity/semantic-release-preset": "^4.1.8",
     "eslint": "^9.28.0",
     "prettier": "^3.5.3",
     "typescript": "5.8.3"
